@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box; /* Ensures padding doesn't affect element width */
-    outline: none; /* Remove outlines from all elements */
+    box-sizing: border-box;
+    outline: none;
 }
 
 body {
     background-color: #FFFFFF;
     color: #0033A0;
     font-family: Arial, sans-serif;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 header {
@@ -34,7 +34,7 @@ nav a {
     background-color: #FFD100;
     padding: 20px;
     color: #0033A0;
-    margin-top: 20px; /* Adds space between sections */
+    margin-top: 20px;
 }
 
 footer {
@@ -50,6 +50,6 @@ footer a {
 }
 
 button:focus, a:focus {
-    outline: 2px solid #FFD100; /* Yellow outline for focus */
-    outline-offset: 4px; /* Space between outline and element */
+    outline: 2px solid #FFD100;
+    outline-offset: 4px;
 }
