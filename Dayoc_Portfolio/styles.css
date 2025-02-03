@@ -218,3 +218,12 @@ footer p {
     transform: scale(0.95);
   }
   
+  .image {
+    height: 25%;
+    width: 25%;
+  }
+
+  video {
+    height: 25%;
+    width: 25%;
+  }
