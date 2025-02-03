@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     color: #333333;
+    background: linear-gradient(135deg, #9b0dfa, #a81f06);
+    
 }
 
 .container {
@@ -20,10 +26,25 @@ header {
     color: white;
     padding: 30px 0;
     text-align: center;
+    background: linear-gradient(135deg, rgba(44, 36, 36, 0.8), rgba(145, 17, 17, 0.6));
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #FFD100;
+    animation: typing 2s steps(180) 1s forwards;
 }
 
 header p {
@@ -32,7 +53,7 @@ header p {
 }
 
 nav {
-    background-color: #333333;
+    background-color: #201e1e;
     padding: 10px 0;
     text-align: center;
 }
@@ -56,7 +77,31 @@ main {
 
 section {
     margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
 }
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Pictures/VikChill.png') no-repeat center center;
+    background-size: cover;
+    animation: parallax 10s infinite linear;
+}
+
+@keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
 
 h2 {
     font-size: 2rem;
@@ -168,9 +213,9 @@ footer p {
     border: none;
     background: none;
     cursor: pointer;
-  }
-  
-  .cta:before {
+}
+
+.cta:before {
     content: "";
     position: absolute;
     top: 0;
@@ -181,18 +226,18 @@ footer p {
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
-  }
-  
-  .cta span {
+}
+
+.cta span {
     position: relative;
     font-family: "Ubuntu", sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #234567;
-  }
-  
-  .cta svg {
+}
+
+.cta svg {
     position: relative;
     top: 0;
     margin-left: 10px;
@@ -203,27 +248,65 @@ footer p {
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all 0.3s ease;
-  }
-  
-  .cta:hover:before {
+}
+
+.cta:hover:before {
     width: 100%;
     background: #b1dae7;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active {
-    transform: scale(0.95);
-  }
-  
-  .image {
-    height: 25%;
-    width: 25%;
-  }
+}
 
-  video {
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+.image {
     height: 25%;
     width: 25%;
-  }
+}
+
+video {
+    height: 25%;
+    width: 25%;
+}
+
+.project:hover,
+.assignment:hover,
+.award:hover,
+.certification:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.button-icon:hover .icon svg {
+    animation: bounce 1s ease infinite;
+}
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #FFD100;
+    border: none;
+    cursor: pointer;
+}
