@@ -13,13 +13,14 @@ body {
     background-color: #FFFFFF;
     color: #333333;
     background: linear-gradient(135deg, #9b0dfa, #a81f06);
-    
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    
 }
+
 
 header {
     background-color: #1F1F1F;
@@ -87,7 +88,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Pictures/VikChill.png') no-repeat center center;
+    background: url("Pictures/VikChill.png") no-repeat center center;
     background-size: cover;
     animation: parallax 10s infinite linear;
 }
@@ -268,6 +269,10 @@ footer p {
     width: 25%;
 }
 
+.image2 {
+    width: 40%;
+}
+
 video {
     height: 25%;
     width: 25%;
@@ -289,24 +294,4 @@ video {
 
 .button-icon:hover .icon svg {
     animation: bounce 1s ease infinite;
-}
-
-.dark-mode {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-}
-
-.light-mode {
-    background-color: #fff;
-    color: #333;
-}
-
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    background: #FFD100;
-    border: none;
-    cursor: pointer;
 }
