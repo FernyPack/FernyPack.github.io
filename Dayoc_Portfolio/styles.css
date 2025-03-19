@@ -8,6 +8,19 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    margin: 16px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+li {
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
